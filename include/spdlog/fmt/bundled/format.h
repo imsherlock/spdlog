@@ -3247,6 +3247,8 @@ void handle_dynamic_spec(int& value, arg_ref<typename Context::char_type> ref,
     value = detail::get_dynamic_spec<Handler>(ctx.arg(ref.val.name),
                                               ctx.error_handler());
     break;
+  default:
+    break;
   }
 }
 
@@ -3462,6 +3464,8 @@ struct formatter<T, Char,
       // Custom format specifiers should be checked in parse functions of
       // formatter specializations.
       break;
+    default:
+      break;
     }
     return it;
   }
@@ -3566,6 +3570,8 @@ template <typename Char = char> class dynamic_formatter {
       break;
     case sign::space:
       checker.on_space();
+      break;
+    default:
       break;
     }
     if (specs_.alt) checker.on_hash();

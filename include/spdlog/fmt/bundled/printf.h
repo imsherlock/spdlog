@@ -585,6 +585,8 @@ OutputIt basic_printf_context<OutputIt, Char>::format() {
         visit_format_arg(detail::char_converter<basic_printf_context>(arg),
                          arg);
         break;
+      default:
+        break;
       }
     }
 

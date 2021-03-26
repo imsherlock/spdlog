@@ -263,6 +263,8 @@ auto vformat_to(OutputIt out, CompiledFormat& cf,
                            arg));
       break;
     }
+    default:
+      break;
     }
   }
   return ctx.out();
